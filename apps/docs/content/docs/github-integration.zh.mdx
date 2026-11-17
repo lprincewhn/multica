@@ -207,6 +207,7 @@ make migrate-up
 
 ## 常见问题
 
+- **已连接但看不到 PR**：连接不会自动创建 PR。请在已授权仓库创建一个标题或分支名包含任务编号的 PR，然后查看对应任务的 **Pull requests** 区块；如果仍为空，检查 GitHub App 的 **Recent Deliveries** 中是否收到 pull request 事件。
 - **连接按钮不可用**：检查 `GITHUB_APP_SLUG` 和 `GITHUB_WEBHOOK_SECRET` 是否已进入 API 进程。
 - **Webhook 返回 401**：确认 GitHub App 与 API 使用同一个 Webhook secret，然后在 GitHub 的 **Recent Deliveries** 中重新投递。
 - **PR 没有关联**：检查仓库是否在 App 授权范围内、自动关联是否开启、编号是否属于当前工作区，以及是否有人把它从任务上移除过。
