@@ -207,6 +207,7 @@ Restart the API server, then complete the connection in **Settings → Code**.
 
 ## Troubleshooting
 
+- **Connected but no PRs appear**: the connection does not create a PR. Open a PR in an authorized repository with the issue identifier in its title or branch name, then check the issue's **Pull requests** section. If it stays empty, check the App's **Recent Deliveries** for the pull request event.
 - **Connect button disabled**: check that `GITHUB_APP_SLUG` and `GITHUB_WEBHOOK_SECRET` reached the API process.
 - **Webhook returns 401**: confirm the GitHub App and the API use the same webhook secret, then redeliver from GitHub's **Recent Deliveries**.
 - **PR not linked**: check that the repository is in the App's authorized scope, auto-linking is on, the identifier belongs to the current workspace, and nobody removed the PR from the issue.
